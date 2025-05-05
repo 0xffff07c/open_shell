@@ -56,7 +56,7 @@ update_blacklist_core() {
     cd /root/cron || exit 1
 
     [[ "$silent_mode" != "silent" ]] && echo "正在下载黑名单文件..."
-    if ! wget -q https://ghfast.top/raw.githubusercontent.com/borestad/blocklist-abuseipdb/main/abuseipdb-s100-1d.ipv4 -O abuseipdb-s100-1d.ipv4.tmp; then
+    if ! wget -q https://proxy.licolnlee.top/https://raw.githubusercontent.com/borestad/blocklist-abuseipdb/main/abuseipdb-s100-1d.ipv4 -O abuseipdb-s100-1d.ipv4.tmp; then
         [[ "$silent_mode" != "silent" ]] && echo -e "${RED}下载失败，使用上次的黑名单${NC}"
         logger "下载失败，使用上次的黑名单"
         return 1
